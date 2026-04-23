@@ -11,7 +11,7 @@ class CityCreate(CityBase):
 class City(CityBase):
     id: int
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class TemperatureBase(BaseModel):
     city_id: int
@@ -24,4 +24,4 @@ class TemperatureCreate(TemperatureBase):
 class Temperature(TemperatureBase):
     id: int
     class Config:
-        orm_mode = True
+        from_attributes = True
